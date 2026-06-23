@@ -15,6 +15,20 @@
   gtag("js", new Date());
   gtag("config", "AW-18107258551");
 </script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18107258551/Ihk4CMn9qMQcELetm7pD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <style>
   .policy-content {
     max-width: 800px;
@@ -116,7 +130,7 @@
   <ul>
     <li><strong>C&T Towing & Roadside</strong></li>
     <li>1121 Berrymans Ln, Reisterstown, MD 21136</li>
-    <li>Phone: <a href="tel:+14437430262" style="color:var(--red);">443-743-0262</a></li>
+    <li>Phone: <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');" style="color:var(--red);">443-743-0262</a></li>
     <li>Email: <a href="mailto:cttowingmd@gmail.com" style="color:var(--red);">cttowingmd@gmail.com</a></li>
   </ul>
 </div>
@@ -147,7 +161,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+14437430262">443-743-0262</a></li>
+          <li><a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');">443-743-0262</a></li>
           <li><a href="mailto:cttowingmd@gmail.com">cttowingmd@gmail.com</a></li>
           <li><a href="contact.html">Get Directions</a></li>
         </ul>

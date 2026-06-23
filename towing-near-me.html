@@ -15,6 +15,20 @@
   gtag("js", new Date());
   gtag("config", "AW-18107258551");
 </script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18107258551/Ihk4CMn9qMQcELetm7pD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,7 +73,7 @@
   <h1>TOWING <span>NEAR ME</span></h1>
   <p>C&T Towing & Roadside is your local towing company serving Owings Mills, Reisterstown, Pikesville and all of Baltimore County and Carroll County. Available 24 hours a day, 7 days a week, 365 days a year.</p>
   <br>
-  <a href="tel:+14437430262" class="btn-primary" style="margin-top:1rem;">&#9990; Call Now — 443-743-0262</a>
+  <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');" class="btn-primary" style="margin-top:1rem;">&#9990; Call Now — 443-743-0262</a>
 </div>
 
 <section class="section">
@@ -118,7 +132,7 @@
 <div class="cta-banner">
   <h2>NEED TOWING NEAR YOU?</h2>
   <p>Call now — we'll be there in 20-30 minutes.</p>
-  <a href="tel:+14437430262" class="btn-white">&#9990; 443-743-0262</a>
+  <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');" class="btn-white">&#9990; 443-743-0262</a>
 </div>
 
 <footer>
@@ -147,7 +161,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+14437430262">443-743-0262</a></li>
+          <li><a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');">443-743-0262</a></li>
           <li><a href="mailto:cttowingmd@gmail.com">cttowingmd@gmail.com</a></li>
           <li><a href="contact.html">Get Directions</a></li>
         </ul>

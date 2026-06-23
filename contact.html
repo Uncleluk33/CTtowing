@@ -24,6 +24,20 @@
   gtag("js", new Date());
   gtag("config", "AW-18107258551");
 </script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18107258551/Ihk4CMn9qMQcELetm7pD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +90,7 @@
     <div class="contact-card">
       <div class="contact-icon">&#9990;</div>
       <h3>Call or Text</h3>
-      <a href="tel:+14437430262">443-743-0262</a>
+      <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');">443-743-0262</a>
       <p>Available 24 hours a day, 7 days a week</p>
     </div>
     <div class="contact-card">
@@ -103,7 +117,7 @@
 <div class="cta-banner">
   <h2>NEED HELP RIGHT NOW?</h2>
   <p>Don't wait — call us and we'll be on our way in minutes.</p>
-  <a href="tel:+14437430262" class="btn-white">&#9990; 443-743-0262</a>
+  <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');" class="btn-white">&#9990; 443-743-0262</a>
 </div>
 
 <footer>
@@ -132,7 +146,7 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+14437430262">443-743-0262</a></li>
+          <li><a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');">443-743-0262</a></li>
           <li><a href="mailto:cttowingmd@gmail.com">cttowingmd@gmail.com</a></li>
           <li><a href="contact.html">Get Directions</a></li>
         </ul>
