@@ -23,16 +23,24 @@
 </script>
 <script>
 function gtag_report_conversion(url) {
+  var called = false;
   var callback = function () {
+    if (called) return;
+    called = true;
     if (typeof(url) != 'undefined') {
       window.location = url;
     }
   };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18107258551/Ihk4CMn9qMQcELetm7pD',
-      'event_callback': callback,
-      'event_timeout': 2000
-  });
+  setTimeout(callback, 1000);
+  try {
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18107258551/Ihk4CMn9qMQcELetm7pD',
+        'event_callback': callback,
+        'event_timeout': 2000
+    });
+  } catch (e) {
+    callback();
+  }
   return false;
 }
 </script>
