@@ -21,26 +21,12 @@
   gtag("config", "AW-18107258551");
 </script>
 <script>
-function gtag_report_conversion(url) {
-  var called = false;
-  var callback = function () {
-    if (called) return;
-    called = true;
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  setTimeout(callback, 400);
+function gtag_report_conversion() {
   try {
     gtag('event', 'conversion', {
-        'send_to': 'AW-18107258551/lhk4CMn9qMQcELetm7pD',
-        'event_callback': callback,
-        'event_timeout': 2000
+        'send_to': 'AW-18107258551/lhk4CMn9qMQcELetm7pD'
     });
-  } catch (e) {
-    callback();
-  }
-  return false;
+  } catch (e) {}
 }
 </script>
 <style>
@@ -144,7 +130,7 @@ function gtag_report_conversion(url) {
   <ul>
     <li><strong>C&T Towing & Roadside</strong></li>
     <li>1121 Berrymans Ln, Reisterstown, MD 21136</li>
-    <li>Phone: <a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');" style="color:var(--red);">443-743-0262</a></li>
+    <li>Phone: <a href="tel:+14437430262" onclick="gtag_report_conversion();" style="color:var(--red);">443-743-0262</a></li>
     <li>Email: <a href="mailto:cttowingmd@gmail.com" style="color:var(--red);">cttowingmd@gmail.com</a></li>
   </ul>
 </div>
@@ -175,7 +161,7 @@ function gtag_report_conversion(url) {
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+14437430262" onclick="return gtag_report_conversion('tel:4437430262');">443-743-0262</a></li>
+          <li><a href="tel:+14437430262" onclick="gtag_report_conversion();">443-743-0262</a></li>
           <li><a href="mailto:cttowingmd@gmail.com">cttowingmd@gmail.com</a></li>
           <li><a href="contact.html">Get Directions</a></li>
         </ul>
