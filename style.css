@@ -578,3 +578,113 @@ footer {
   .stats-bar { gap: 2rem; }
   footer { justify-content: center; text-align: center; }
 }
+
+
+/* =============================================================================
+   Additions for towing-near-me.html (local landing-page update)
+   — fleet photo grid, FAQ block, 24-hour section spacing, and sticky mobile call bar
+   ============================================================================= */
+
+.section-hours > p {
+  margin-bottom: 1.5rem;
+}
+
+.fleet-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+}
+
+.fleet-photos figure {
+  margin: 0;
+  background: var(--dark);
+  border: 1px solid #222;
+  overflow: hidden;
+}
+
+.fleet-photos picture,
+.fleet-photos img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #222;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: var(--dark);
+  padding: 1.5rem 2rem;
+}
+
+.faq-item h3 {
+  font-family: var(--font-condensed);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 700px;
+}
+
+/* Sticky mobile call bar — visible only under ~768px.
+   Add class "has-mobile-call-bar" on <body> of pages that include the bar
+   so padding-bottom is not applied site-wide. */
+.mobile-call-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body.has-mobile-call-bar {
+    padding-bottom: 64px;
+  }
+
+  .section-hours {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .fleet-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-call-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    background: var(--red);
+    border-top: 2px solid var(--red-dark);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .mobile-call-bar a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 56px;
+    color: var(--white);
+    font-family: var(--font-condensed);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
