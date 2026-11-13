@@ -688,3 +688,8 @@ footer {
     text-transform: uppercase;
   }
 }
+
+/* Logo homepage link. display:flex matches .nav-logo (a block flex box): the nav
+   item stays content-sized, and the footer logo stays left-aligned under the
+   mobile footer text-align:center rule. */
+.nav-logo-link{display:flex;text-decoration:none;color:inherit;}
