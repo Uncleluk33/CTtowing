@@ -1,4 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap');
+/* Local fallbacks sized to the webfonts so font-display:swap does not reflow.
+   Once Bebas Neue, Barlow, and Barlow Condensed load, they still win the stack. */
+@font-face {
+  font-family: 'Bebas Neue Fallback';
+  font-style: normal;
+  font-weight: 100 900;
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Noto Sans');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 56.7%;
+  ascent-override: 158.73%;
+  descent-override: 52.91%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Barlow Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Noto Sans');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 88.21%;
+  ascent-override: 113.36%;
+  descent-override: 22.67%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Barlow Fallback';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Noto Sans');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 89.76%;
+  ascent-override: 111.41%;
+  descent-override: 22.28%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Barlow Fallback';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Noto Sans');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 90.62%;
+  ascent-override: 110.35%;
+  descent-override: 22.07%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Barlow Condensed Fallback';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Noto Sans');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  size-adjust: 73.6%;
+  ascent-override: 135.87%;
+  descent-override: 27.17%;
+  line-gap-override: 0%;
+}
 
 :root {
   --red: #CC2200;
@@ -8,9 +64,9 @@
   --gray: #888;
   --light-gray: #f5f5f5;
   --white: #fff;
-  --font-display: 'Bebas Neue', sans-serif;
-  --font-condensed: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
+  --font-display: 'Bebas Neue', 'Bebas Neue Fallback', sans-serif;
+  --font-condensed: 'Barlow Condensed', 'Barlow Condensed Fallback', sans-serif;
+  --font-body: 'Barlow', 'Barlow Fallback', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -530,7 +586,7 @@ footer {
   max-width: 300px;
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-family: var(--font-condensed);
   font-size: 0.8rem;
   font-weight: 700;
@@ -610,6 +666,10 @@ footer {
   display: block;
 }
 
+.fleet-photos img {
+  aspect-ratio: 1200 / 628;
+}
+
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -680,6 +740,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 56px;
+    height: 56px;
     color: var(--white);
     font-family: var(--font-condensed);
     font-size: 1.15rem;
