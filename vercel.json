@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/towing-near-me", "destination": "/towing-near-me.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/heavy-duty-towing", "destination": "/heavy-duty-towing.html" },
+    { "source": "/motorcycle-towing", "destination": "/motorcycle-towing.html" },
+    { "source": "/roadside-assistance", "destination": "/roadside-assistance.html" },
+    { "source": "/specialty-vehicle-towing", "destination": "/specialty-vehicle-towing.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" }
+  ]
+}
